@@ -82,7 +82,7 @@ dist
 
 # Gatsby files
 .cache/
-public
+# Note: public/ is needed for React/Vite projects to include static assets
 
 # Vuepress build output
 .vuepress/dist
