@@ -18,7 +18,8 @@ const Blog = () => {
     <PageLayout>
       <SEO 
         title="Revv Aerospace" 
-        description="Stay updated with the latest news and insights about sensor-integrated textiles and smart technology from WRLDS Technologies."
+        description="At Revv Aerospace, we are redefining the future of flight through innovation, precision engineering, and relentless pursuit of excellence. Our capabilities span across next-generation UAV systems, advanced composite structures, CNC and additive manufacturing, payload integration, AI-driven autonomy, and urban air mobility (UAM) solutions.
+We design, build, and operate aerial systems that are mission-ready today and future-ready for tomorrow."
         imageUrl={featuredPost?.imageUrl || "/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png"}
         keywords={['smart textiles', 'textile technology', 'industry news', 'sensor innovation', 'wearable tech', 'smart fabrics']}
         type="website"
@@ -27,9 +28,10 @@ const Blog = () => {
       <div className="w-full pt-24 pb-12 bg-gradient-to-b from-black to-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">WRLDS News &amp; Insights</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
             <p className="text-xl text-gray-300 mb-6">
-              The latest trends and news in sensor-integrated textiles and smart technology
+            At Revv Aerospace, we are redefining the future of flight through innovation, precision engineering, and relentless pursuit of excellence. Our capabilities span across next-generation UAV systems, advanced composite structures, CNC and additive manufacturing, payload integration, AI-driven autonomy, and urban air mobility (UAM) solutions.
+            We design, build, and operate aerial systems that are mission-ready today and future-ready for tomorrow
             </p>
           </div>
         </div>
@@ -37,38 +39,7 @@ const Blog = () => {
       
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredPost && (
-            <Link to={`/blog/${featuredPost.slug}`} className="col-span-1 md:col-span-2 lg:col-span-3">
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full">
-                <div className="grid md:grid-cols-2 h-full">
-                  <div 
-                    className="bg-cover bg-center h-64 md:h-full p-8 flex items-center justify-center"
-                    style={{ 
-                      backgroundImage: `url('${featuredPost.imageUrl}')`,
-                      backgroundSize: 'cover',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center'
-                    }}
-                  >
-                    <div className="text-white text-center bg-black/30 backdrop-blur-sm p-4 rounded-lg">
-                      <span className="px-3 py-1 bg-white/10 rounded-full text-sm font-medium inline-block mb-4">Featured</span>
-                      <h3 className="text-2xl md:text-3xl font-bold">{featuredPost.title}</h3>
-                    </div>
-                  </div>
-                  <CardContent className="p-8">
-                    <p className="text-gray-500 text-sm mb-2">Published: {featuredPost.date}</p>
-                    <p className="text-gray-700 mb-6">
-                      {featuredPost.excerpt}
-                    </p>
-                    <Button variant="outline" className="group">
-                      Read more 
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
-                  </CardContent>
-                </div>
-              </Card>
-            </Link>
-          )}
+         
           
           {/* Other blog posts */}
           {otherPosts.map((post) => (

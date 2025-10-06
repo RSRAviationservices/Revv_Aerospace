@@ -10,6 +10,9 @@ interface SEOProps {
   imageUrl?: string;
   author?: string;
   keywords?: string[];
+  isBlogPost?: boolean;
+  publishDate?: string;
+  category?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -30,7 +33,10 @@ const SEO: React.FC<SEOProps> = ({
     'sustainable aerospace',
     'next-gen drones',
     'aerospace innovation'
-  ]
+  ],
+  isBlogPost = false,
+  publishDate,
+  category
 }) => {
   const location = useLocation();
   const currentUrl = `https://revvaerospace.com${location.pathname}`;
