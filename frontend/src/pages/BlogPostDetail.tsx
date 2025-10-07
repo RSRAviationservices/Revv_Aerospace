@@ -37,7 +37,6 @@ const BlogPostDetail = () => {
         imageUrl={post.imageUrl}
         keywords={post.keywords}
         isBlogPost={true}
-        publishDate={new Date(post.date).toISOString()}
         author={post.author}
         category={post.category}
         type="article"
@@ -60,7 +59,7 @@ const BlogPostDetail = () => {
               <div className="w-full max-w-4xl mx-auto text-left md:text-center">
                 <Link to="/blog" className="inline-flex items-center text-gray-300 hover:text-white mb-4 transition-colors text-sm">
                   <ArrowLeft className="mr-2 h-3 w-3" />
-                  Back to Blog
+                  Back to Services
                 </Link>
                 
                 {/* Mobile-optimized title */}
@@ -70,17 +69,6 @@ const BlogPostDetail = () => {
                 
                 {/* Compact mobile metadata */}
                 <div className="flex flex-col gap-3 text-gray-300 mb-4 sm:mb-6">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-start md:justify-center gap-2 sm:gap-6">
-                    <div className="flex items-center text-xs sm:text-base">
-                      <Calendar className="mr-2 h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
-                      <span>{post.date}</span>
-                    </div>
-                    <div className="flex items-center text-xs sm:text-base">
-                      <User className="mr-2 h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
-                      <span>{post.author}</span>
-                    </div>
-                  </div>
-                  
                   <div className="flex justify-start md:justify-center">
                     <div className="px-3 py-1 sm:px-4 sm:py-2 bg-white/15 backdrop-blur-sm rounded-full text-xs sm:text-sm font-medium border border-white/20">
                       {post.category}

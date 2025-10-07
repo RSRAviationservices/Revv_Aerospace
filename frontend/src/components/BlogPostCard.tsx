@@ -8,7 +8,6 @@ interface BlogPostCardProps {
   title: string;
   excerpt: string;
   imageUrl: string;
-  date: string;
   slug: string;
   category: string;
 }
@@ -17,7 +16,6 @@ const BlogPostCard = ({
   title,
   excerpt,
   imageUrl,
-  date,
   slug,
   category
 }: BlogPostCardProps) => {
@@ -36,7 +34,6 @@ const BlogPostCard = ({
             </div>
           </div>
           <CardContent className="p-6">
-            <p className="text-gray-500 text-sm mb-2">{date}</p>
             <h3 className="text-xl font-bold mb-2 line-clamp-2">{title}</h3>
             <p className="text-gray-700 mb-4 line-clamp-3">{excerpt}</p>
             <Button variant="outline" className="group mt-auto">
